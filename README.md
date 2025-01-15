@@ -1,16 +1,22 @@
-![Image](website/public/img/logo-fullcolor-whitebackground-rbg.png)
+# OpenMiso
+
+## Disclaimer
+
+OpenMiso is a community-driven fork of the Waypoint project. This project is not affiliated with, endorsed by, or connected to HashiCorp in any way.
+
+OpenMiso is based on the last version of Waypoint released under the Mozilla Public License (MPL). We are currently in the process of removing all references, branding, and other elements associated with HashiCorp to ensure compliance with trademark and licensing rules.
+
+We would like to express our gratitude to HashiCorp for creating and sharing Waypoint as an open-source tool, which has been a valuable resource for developers around the world. OpenMiso aims to build upon this foundation and continue its development in the spirit of openness and community collaboration.
 
 ----------------------------------------
 
-# Waypoint
+Some resources below may still link to HashiCorp's website.
 
-* Website: https://www.waypointproject.io
-* Tutorials: [HashiCorp Developer](https://developer.hashicorp.com/waypoint/tutorials)
-* Forum: [Discuss](https://discuss.hashicorp.com/c/waypoint)
+----------------------------------------
 
-Waypoint allows developers to define their application build, deploy, and release lifecycle as code, reducing the time to deliver deployments through a consistent and repeatable workflow.
+OpenMiso allows developers to define their application build, deploy, and release lifecycle as code, reducing the time to deliver deployments through a consistent and repeatable workflow.
 
-Waypoint supports a number of build methods and target platforms out of the box
+OpenMiso supports a number of build methods and target platforms out of the box
 and more can be easily added via plugins:
 
 * Cloud Native Buildpacks
@@ -21,11 +27,8 @@ and more can be easily added via plugins:
 * Google Cloud Run
 * And many more...
 
-Waypoint runs on Linux, Mac OS X, and Windows.
+OpenMiso runs on Linux, Mac OS X, and Windows.
 
-**Please note**: We take Waypoint's security and our users' trust very seriously. If you
-believe you have found a security issue in Waypoint, please [responsibly disclose](https://www.hashicorp.com/security#vulnerability-reporting) by
-contacting us at security@hashicorp.com.
 
 ## Quick Start
 
