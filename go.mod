@@ -92,7 +92,7 @@ require (
 	github.com/natefinch/atomic v0.0.0-20200526193002-18c0533a5b09
 	github.com/novln/docker-parser v1.0.0
 	github.com/oklog/ulid v1.3.1
-	github.com/oklog/ulid/v2 v2.0.2
+	github.com/oklog/ulid/v2 v2.1.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.0.3-0.20211202183452-c5a74bcca799
