@@ -20,8 +20,8 @@ type DocsCommand struct {
 }
 
 func (c *DocsCommand) Run(args []string) int {
-	os.MkdirAll("./website/content/commands", 0755)
-	os.MkdirAll("./website/content/partials/commands", 0755)
+	os.MkdirAll("./.mdx/commands", 0755)
+	os.MkdirAll("./.mdx/partials/commands", 0755)
 
 	commands := map[string]string{}
 
@@ -50,7 +50,7 @@ func (c *DocsCommand) Run(args []string) int {
 
 	sort.Strings(keys)
 
-	w, err := os.Create("./website/content/partials/commands/command-list.mdx")
+	w, err := os.Create("./.mdx/partials/commands/command-list.mdx")
 	if err != nil {
 		c.Log.Error("error creating index page", "error", err)
 		return 1
@@ -72,11 +72,11 @@ func (c *DocsCommand) genDocs(name string, cmd cli.Command) error {
 
 	fmt.Printf("=> %s\n", name)
 	goodName := strings.ReplaceAll(name, " ", "-")
-	path := filepath.Join("./website", "content", "commands", goodName) + ".mdx"
+	path := filepath.Join("./.mdx", "commands", goodName) + ".mdx"
 
 	w, err := os.Create(path)
 	if err != nil {
-		return err
+		panic(err)
 	}
 
 	defer w.Close()
@@ -98,7 +98,7 @@ description: "%s"
 
 	fmt.Fprintf(w, "@include \"commands/%s\"\n\n", descFile)
 
-	err = c.touch("./website/content/partials/commands/" + descFile)
+	err = c.touch("./.mdx/partials/commands/" + descFile)
 	if err != nil {
 		return err
 	}
@@ -225,7 +225,7 @@ description: "%s"
 
 	fmt.Fprintf(w, "\n@include \"commands/%s\"\n", moreFile)
 
-	return c.touch("./website/content/partials/commands/" + moreFile)
+	return c.touch("./.mdx/partials/commands/" + moreFile)
 }
 
 func (c *DocsCommand) touch(name string) error {

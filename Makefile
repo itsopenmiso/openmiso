@@ -203,7 +203,8 @@ gen/website-mdx: # Generates the website markdown files
 	go run ./cmd/waypoint docs -website-mdx
 	go run ./cmd/waypoint docs -json
 	go run ./tools/gendocs
-	cd ./website; npx --no-install next-hashicorp format content # only format the content folder in website
+	cd .mdx; go run github.com/itsopenmiso/websitegen openmiso
+	# NO LONGER WORKS... -> cd ./website; npx --no-install next-hashicorp format content # only format the content folder in website
 
 .PHONY: tools
 tools: # Install dependencies and tools required to build
