@@ -51,6 +51,7 @@ Cpu resource configuration.
 
 CPU lets you define resource limits and requests for a container in a deployment.
 
+
 - **Optional**
 
 ###### pod.container.cpu.limit
@@ -72,6 +73,7 @@ How much cpu to give the container in cpu cores. Supports m to indicate milli-co
 Memory resource configuration.
 
 Memory lets you define resource limits and requests for a container in a deployment.
+
 
 - **Optional**
 
@@ -148,13 +150,14 @@ Configuration to control liveness and readiness probes.
 
 Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
 
+
 - **Optional**
 
 ###### pod.container.probe.failure_threshold
 
 Number of times a liveness probe can fail before the container is killed.
 
-FailureThreshold \* TimeoutSeconds should be long enough to cover your worst case startup times.
+FailureThreshold * TimeoutSeconds should be long enough to cover your worst case startup times.
 
 - Type: **uint**
 - **Optional**
@@ -259,6 +262,7 @@ Cpu resource configuration.
 
 CPU lets you define resource limits and requests for a container in a deployment.
 
+
 - **Optional**
 
 ###### pod.sidecar.container.cpu.limit
@@ -280,6 +284,7 @@ How much cpu to give the container in cpu cores. Supports m to indicate milli-co
 Memory resource configuration.
 
 Memory lets you define resource limits and requests for a container in a deployment.
+
 
 - **Optional**
 
@@ -356,13 +361,14 @@ Configuration to control liveness and readiness probes.
 
 Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
 
+
 - **Optional**
 
 ###### pod.sidecar.container.probe.failure_threshold
 
 Number of times a liveness probe can fail before the container is killed.
 
-FailureThreshold \* TimeoutSeconds should be long enough to cover your worst case startup times.
+FailureThreshold * TimeoutSeconds should be long enough to cover your worst case startup times.
 
 - Type: **uint**
 - **Optional**
@@ -436,6 +442,7 @@ Sets up a horizontal pod autoscaler to scale deployments automatically.
 
 This configuration will automatically set up and associate the current deployment with a horizontal pod autoscaler in Kuberentes. Note that for this to work, you must also define resource limits and requests for a deployment otherwise the metrics-server will not be able to properly determine a deployments target CPU utilization.
 
+
 - **Optional**
 
 ##### autoscale.cpu_percent
@@ -471,6 +478,7 @@ The kubectl context to use, as defined in the kubeconfig file.
 Cpu resource configuration.
 
 CPU lets you define resource limits and requests for a container in a deployment.
+
 
 - **Optional**
 
@@ -520,6 +528,7 @@ Memory resource configuration.
 
 Memory lets you define resource limits and requests for a container in a deployment.
 
+
 - **Optional**
 
 ##### memory.limit
@@ -551,13 +560,14 @@ Configuration to control liveness and readiness probes.
 
 Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
 
+
 - **Optional**
 
 ##### probe.failure_threshold
 
 Number of times a liveness probe can fail before the container is killed.
 
-FailureThreshold \* TimeoutSeconds should be long enough to cover your worst case startup times.
+FailureThreshold * TimeoutSeconds should be long enough to cover your worst case startup times.
 
 - Type: **uint**
 - **Optional**
