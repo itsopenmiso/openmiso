@@ -359,7 +359,7 @@ func (c *AppDocsCommand) mdxFormat(name, ct string, doc *docs.Documentation) {
 	// we use this constant to compare to ct for some special behavior
 	const csType = "configsourcer"
 
-	w, err := os.Create(fmt.Sprintf("./website/content/partials/components/%s-%s.mdx", ct, name))
+	w, err := os.Create(fmt.Sprintf("./.mdx/partials/components/%s-%s.mdx", ct, name))
 	if err != nil {
 		panic(err)
 	}
@@ -672,7 +672,7 @@ func (c *AppDocsCommand) hclFormat(name, ct string, doc *docs.Documentation) {
 }
 
 func (c *AppDocsCommand) mdxFormatConfigSourcer(name, ct string, doc *docs.Documentation) {
-	w, err := os.Create(fmt.Sprintf("./website/content/partials/components/%s-%s.mdx", ct, name))
+	w, err := os.Create(fmt.Sprintf("./.mdx/partials/components/%s-%s.mdx", ct, name))
 	if err != nil {
 		panic(err)
 	}
@@ -1001,7 +1001,7 @@ func (c *AppDocsCommand) funcsMDX() int {
 
 	sort.Strings(keys)
 
-	w, err := os.Create("./website/content/partials/funcs.mdx")
+	w, err := os.Create("./.mdx/partials/funcs.mdx")
 	if err != nil {
 		panic(err)
 	}
