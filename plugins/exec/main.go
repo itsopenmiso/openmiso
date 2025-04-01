@@ -1,1 +1,5 @@
-package exec
+package main
+
+func main() {
+
+}

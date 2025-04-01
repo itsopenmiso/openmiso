@@ -27,7 +27,7 @@ go.work.sum
 
 build/
 
-./openmiso
-./openmiso-client
-./openmiso-runner
-./openmiso-server
+openmiso
+openmiso-client
+openmiso-runner
+openmiso-server
