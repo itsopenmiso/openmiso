@@ -1,4 +1,4 @@
-module github.com/itsopenmiso/openmiso-ng
+module github.com/itsopenmiso/openmiso
 
 go 1.23.3
 
