@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "github.com/itsopenmiso/openmiso/cmd"
 
+func main() {
+	cmd.Execute()
 }

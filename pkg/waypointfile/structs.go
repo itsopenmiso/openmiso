@@ -1,6 +1,8 @@
 package waypointfile
 
-import "github.com/hashicorp/hcl/v2"
+import (
+	"github.com/hashicorp/hcl/v2"
+)
 
 type Jobfile struct {
 	Project   string      `hcl:"project,optional"`
@@ -32,7 +34,7 @@ type ReleaseBlock struct {
 }
 
 type UseBlock struct {
-	PluginName string `hcl:"name,label"`
+	Name string `hcl:"name,label"`
 }
 
 type Variable struct {

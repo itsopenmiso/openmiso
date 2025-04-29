@@ -1,0 +1,18 @@
+project: openmiso
+version: 0
+apps:
+  - name: cli
+    build:
+      - use: exec
+        commands:
+          - go build -o ./miso ./apps/cli
+  - name: server
+    build:
+      - use: exec
+        commands:
+          - go build -o ./miso-server ./apps/server
+  - name: runner
+    build:
+      - use: exec
+        commands:
+          - go build -o ./miso-runner ./apps/runner
