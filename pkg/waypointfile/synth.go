@@ -1,12 +1,13 @@
 package waypointfile
 
 import (
-	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/hcl/v2/gohcl"
-	"github.com/hashicorp/hcl/v2/hclparse"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/hashicorp/hcl/v2"
+	"github.com/hashicorp/hcl/v2/gohcl"
+	"github.com/hashicorp/hcl/v2/hclparse"
 )
 
 //FIXME: I'm ugly but when it's okay I get the job done...
@@ -39,7 +40,7 @@ func Synth() *Jobfile {
 
 	parser := hclparse.NewParser()
 	for _, f := range hclFiles {
-		parser.ParseHCLFile(f)
+		_, _ = parser.ParseHCLFile(f)
 	}
 
 	jf := &Jobfile{}
@@ -47,7 +48,10 @@ func Synth() *Jobfile {
 	for _, file := range parser.Files() {
 		list = append(list, file)
 	}
-	gohcl.DecodeBody(hcl.MergeFiles(list), nil, jf)
+	d := gohcl.DecodeBody(hcl.MergeFiles(list), nil, jf)
+	if d.HasErrors() {
+		panic(d)
+	}
 	return jf
 
 }

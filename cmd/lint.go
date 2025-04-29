@@ -5,7 +5,8 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/itsopenmiso/openmiso-ng/pkg/waypointfile"
+
+	"github.com/itsopenmiso/openmiso/pkg/waypointfile"
 
 	"github.com/spf13/cobra"
 )
@@ -20,7 +21,7 @@ and usage of using your command. For example:
 Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(_ *cobra.Command, _ []string) {
 		fmt.Println("lint called")
 		// FIXME: Lint only one file
 		// Gets current directory

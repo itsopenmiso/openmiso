@@ -26,8 +26,12 @@ go.work.sum
 .env
 
 build/
-
+bin/
 openmiso
 openmiso-client
 openmiso-runner
 openmiso-server
+miso
+miso-runner
+miso-server
+.idea
